@@ -1,0 +1,32 @@
+<!-- Latest compiled and minified CSS -->
+
+<head>
+
+</head>
+<h1>Users#index</h1>
+<p>Find me in app/views/users/index.html.erb</p>
+<body>
+  <table class="table table-striped" style="width: 90%">
+    <thead><td>First Name</td><td>Last Name</td><td>Email</td></thead>
+    <th>First Name</th><th>Last Name</th><th>Email</th><th>Action</th>
+    <tbody>
+      <% @users.each do |user| %>
+        <tr>
+          <td><%= user.first_name %></td>
+          <td><%= user.last_name %></td>
+          <td><%= user.email %></td>
+          <td><a href="users/<%= user.id %>">Show</a>
+             | <a href="/users/<%= user.id %>/edit">Edit</a>
+              | <a data-method='delete' href="/users/<%= user.id %>/destroy">Delete</a></td>
+
+        </tr>
+    <% end %>
+  </tbody>
+  </table>
+  <a href="/users/new">Add New User</a>
+</body>
+<% if flash[:errors] %>
+  <% flash[:errors].each do |err| %>
+    <p style="color:red"><%= err %></p>
+  <% end %>
+<% end %>

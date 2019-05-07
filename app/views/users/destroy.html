@@ -1,0 +1,9 @@
+<h1>User Deleted</h1>
+
+<a href="/">Back</a>
+
+<% if flash[:errors] %>
+  <% flash[:errors].each do |err| %>
+    <p style="color:red"><%= err %></p>
+  <% end %>
+<% end %>

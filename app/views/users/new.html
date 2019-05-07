@@ -1,0 +1,26 @@
+<head>
+  <h1>Users New</h1>
+    <form action="/users/" method="post">
+        <input name="authenticity_token" type="hidden" value="<%= form_authenticity_token %>">
+        <p>First Name:</p>
+        <input type="text" name="first_name">
+        <p>Last Name:</p>
+        <input type="text" name="last_name">
+        <p>Email</p>
+        <input type="text" name="email">
+        <p>Password</p>
+        <input type="text" name="password">
+        <p>Password Confirmation</p>
+        <input type="text" name="password_confirmation">
+        <br><br>
+        <input type="submit" value="Create">
+    </form>
+
+    <% if flash[:errors] %>
+      <% flash[:errors].each do |err| %>
+        <p style="color:red"><%= err %></p>
+      <% end %>
+    <% end %>
+    
+    <a href="/">Back</a>
+</head>

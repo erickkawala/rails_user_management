@@ -1,0 +1,13 @@
+
+  <h1>Show User</h1>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <h3>Name: <%= @user.first_name %> <%= @user.last_name %></h3>
+    <h3>Email: <%= @user.email %></h3>
+
+    <a href="/">Back</a>
+    <a href="/users/:id/edit">Edit</a>
+  </body>
