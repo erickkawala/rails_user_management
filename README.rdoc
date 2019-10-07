@@ -27,13 +27,7 @@ Things you may want to cover:
 Please feel free to use a different markup language if you do not plan to run
 <tt>rake doc:app</tt>.
 
-### VULNS:
 
-GitHub	Sign in
-erickkawala,
-We found a potential security vulnerability in a repository for which you have been granted security alert access.
-
-@erickkawala	erickkawala/rails_user_management
 Known moderate severity security vulnerability detected in rack < 1.6.11 defined in Gemfile.lock.
 Gemfile.lock update suggested: rack ~> 1.6.11.
 Always verify the validity and compatibility of suggestions with your codebase.
